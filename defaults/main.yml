@@ -1,0 +1,24 @@
+common_setup:
+  packages:
+    - build-essential
+    - automake
+    - bison
+    - autoconf
+    - pkg-config
+    - libreadline6
+    - libreadline6-dev
+    - openssl
+    - libssl-dev
+    - libncurses5-dev
+    - curl
+    - git
+    - zlib1g
+    - zlib1g-dev
+    - libyaml-dev
+    - libsqlite3-dev
+    - libxml2-dev
+    - libxslt1-dev
+    - nfs-common
+    - ntp
+    - vim
+    - htop
