@@ -1,5 +1,6 @@
 ---
 - name: upgrade
+  sudo: yes
   action: apt update_cache=yes upgrade=yes
 
 - name: ensure the system encoding is utf-8
@@ -7,5 +8,6 @@
   template: src=locale dest=/etc/default/locale owner=root group=root mode=644
 
 - name: install dependencies 
+  sudo: yes
   action: apt pkg={{ item }} state=installed
   with_items: common_setup.packages
