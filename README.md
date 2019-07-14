@@ -18,7 +18,7 @@ Contains the only one variable `common_setup.packages` which contain the followi
 - bison
 - autoconf
 - pkg-config
-- libreadline6
+- libreadline7
 - libreadline6-dev
 - openssl
 - libssl-dev

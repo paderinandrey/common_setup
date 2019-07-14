@@ -5,9 +5,15 @@
 
 - name: ensure the system encoding is utf-8
   become: yes
-  template: src=locale dest=/etc/default/locale owner=root group=root mode=644
+  template:
+    src: locale.j2
+    dest: /etc/default/locale
+    owner: root
+    group: root
+    mode: 644
 
-- name: install dependencies 
+- name: install dependencies
   become: yes
-  action: "apt pkg={{ item }} state=present"
-  with_items: "{{ common_setup.packages }}"
+  apt:
+    pkg: '{{ common_setup.packages }}'
+    state: present
